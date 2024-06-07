@@ -10,19 +10,27 @@ const CrearCita = ({ agregarCita, size }) => {
     const onSubmit = (e) => {
         e.preventDefault()
 
-        const cita = {
-            id: size + 1,
-            nombre,
-            correo,
-            telefono,
-            sintomas
+        if (nombre.trim().length === 0 || correo.trim().length === 0 || telefono.trim().length === 0 || sintomas.trim().length === 0) {
+            return
+        } else {
+            const cita = {
+                id: size + 1,
+                nombre,
+                correo,
+                telefono,
+                sintomas
+            }
+            agregarCita(cita)
+            setNombre('')
+            setCorreo('')
+            setTelefono('')
+            setSintomas('')
         }
-        agregarCita(cita)
     }
 
     return (
         <>
-            <div className="card text-center shadow px-4" style={{ width: '36rem' }}>
+            <div className="card mb-4 text-center h-25 shadow px-4" style={{ width: '36rem' }}>
                 <h3 className="text-secondary my-4">Nueva Cita</h3>
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
@@ -39,7 +47,7 @@ const CrearCita = ({ agregarCita, size }) => {
                     <div className="input-group mb-3">
                         <textarea value={sintomas} onChange={e => setSintomas(e.target.value)} className="form-control" placeholder="Sintomas"></textarea>
                     </div>
-                    <input type="submit" value="Crear Cita" className="btn btn-success mb-3 w-100" />
+                    <input type="submit" value="Crear Cita" className="btn btn-success mb-4 w-100" />
                 </form>
             </div>
         </>
