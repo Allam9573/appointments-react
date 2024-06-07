@@ -32,7 +32,6 @@ const ListaCitas = () => {
         nuevasCitas[indexCita].telefono = citaEditar.telefono
         nuevasCitas[indexCita].sintomas = citaEditar.sintomas
         setCitas(nuevasCitas)
-
     }
 
     return (

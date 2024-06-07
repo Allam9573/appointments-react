@@ -38,7 +38,7 @@ const CitaItem = ({ cita, eliminarCita, editarCita }) => {
                     <div className="mb-3">
                         <textarea value={sintomas} onChange={e => setSintomas(e.target.value)} className="form-control" cols="10" rows="2"></textarea>
                     </div>
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-start">
                         <input type="submit" className="btn btn-primary w-25 me-2" value={'Guardar Cambios'} />
                         <button onClick={() => setEditar(false)} className="btn w-25 btn-outline-primary">Cancelar</button>
                     </div>
