@@ -36,7 +36,7 @@ const ListaCitas = () => {
 
     return (
         <>
-            <div className="row mx-auto w-75">
+            <div className="row mx-auto w-100">
                 <CrearCita size={citas.length} agregarCita={agregarCita} />
                 <div className="w-50 mx-auto">
                     {

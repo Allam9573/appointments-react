@@ -18,10 +18,7 @@ export const Navbar = () => {
                             <Link class="nav-link" to="/citas">Citas Medicas</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Especialidades</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <Link class="nav-link" to="/especialidades">Especialidades</Link>
                         </li>
                     </ul>
                 </div>
