@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import { CrearCita } from './components/CrearCita'
-import { ListaCitas } from './components/ListaCitas'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Home } from './pages/Home'
+import { Especialidades } from './pages/Especialidades'
+import { CitaItem } from './components/CitaItem'
+import { Citas } from './pages/Citas'
 
 function App() {
 
-
   return (
     <>
-      <h2 className='text-center text-secondary my-5 fs-1'>Citas Medicas</h2>
-      <ListaCitas  />
+
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />}>
+            <Route path='/especialidades' element={<Especialidades />} />
+            <Route path='/citas' element={<Citas />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
